@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto ">
                 <li class="nav-item">
-                    <a class="nav-link enlace" aria-current="page" href="/"> Panel </a>
+                    <a class="nav-link enlace" aria-current="page" href="/inicio"> Inicio </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link enlace" aria-current="page" href="/mis_libros/{{user_in_session.id}}"> Mis Libros </a>
@@ -96,7 +96,7 @@
                     <label for="portada" class="col-form-label">Portada</label>
                 </div>
                 <div class="col-9">
-                    <input value="{{libro.portada}}" type="file" id="portada" name="portada" class="form-control">
+                    <input type="file" name="portada" class="form-control" accept="image/*">
                 </div>
             </div>
             

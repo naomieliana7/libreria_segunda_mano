@@ -10,7 +10,7 @@ bcrypt = "*"
 python-dotenv = "*"
 jinja2 = "*"
 flask-bcrypt = "*"
-flask-mail = "*"
+
 
 [dev-packages]
 

@@ -38,7 +38,7 @@ def procesar_libro():
         'categoría': request.form["categoría"],
         'precio': request.form["precio"],
         'descripción': request.form["descripción"],
-        'portada': nombre_archivo,  # Aquí asignamos el archivo de la portada
+        'portada': nombre_archivo, 
         'usuario_id': session['usuario_id']
     }
     print(data)
@@ -93,7 +93,6 @@ def procesar_libro_editar(id):
     libro.categoría = request.form['categoría']
     libro.precio = request.form['precio']
     libro.descripción = request.form['descripción']
-    libro.portada = request.files['portada']
 
     libro.actualizar_libro()
     
