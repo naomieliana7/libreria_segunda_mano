@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+{% endblock %}
+
+{% block estilos %}
+{% endblock %}
+
+
+
+{% block contenido %}
+<body class="login_registro">
+    <div class="row">
+        <div class="col-6 mx-auto"> 
+            {{session.usuario}}
+            <h3>REGISTRO</h3>
+            <hr>
+            <form action="/procesar_registro" method="post">
+                <div class="row g-3 align-items-center mt-3">
+                    <div class="col-3">
+                        <label for="nombre" class="col-form-label indicador">Nombre</label>
+                    </div>
+                    <div class="col-9">
+                        <input type="text" id="nombre" name="nombre" class="form-control">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mt-3">
+                    <div class="col-3">
+                        <label for="name" class="col-form-label indicador">Apellido</label>
+                    </div>
+                    <div class="col-9">
+                        <input type="text" id="apellido" name="apellido" class="form-control">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mt-3">
+                    <div class="col-3">
+                        <label for="name" class="col-form-label indicador">Correo</label>
+                    </div>
+                    <div class="col-9">
+                        <input type="text" id="correo" name="correo" class="form-control">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mt-3">
+                    <div class="col-3">
+                        <label for="name" class="col-form-label indicador">Contraseña</label>
+                    </div>
+                    <div class="col-9">
+                        <input type="password" id="contraseña" name="contraseña" class="form-control">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mt-3">
+                    <div class="col-3">
+                        <label for="name" class="col-form-label indicador">Confirmar Contraseña</label>
+                    </div>
+                    <div class="col-9">
+                        <input type="password" id="confirmar_contraseña" name="confirmar_contraseña"
+                            class="form-control">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mt-3">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-9">
+                        <button class="btn btn-primary" type="submit" style="font-size: 20px;">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+        </div>
+    </div>
+</body>
+{% endblock %}

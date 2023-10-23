@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Book Bazar{% endblock %}
+{% block contenido %}
+
+<body id="inicio_portada">
+    <div id="container">
+        <h1 id="titulo_portada">Book Bazar</h1>
+        <div class="mt-5">
+            <p class="texto_inicio">Si ya tienes una cuenta</p>
+            <a id="boton_inicio" href="/login">Iniciar Sesión</a>
+            <p class="mt-4 texto_inicio">y si no <a id="boton_registro" href="/registro">regístrate aquí</a>.</p>
+        </div>
+
+    </div>
+</body>
+{% endblock %}

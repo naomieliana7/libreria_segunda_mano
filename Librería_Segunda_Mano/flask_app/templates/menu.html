@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class=" titulo navbar-brand fs-1 fw-bold ml-4" href="/">Book Bazar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item" id="boton">
+                    <a class="nav-link enlace" aria-current="page" href="/mis_libros/{{user_in_session.id}}" > Mis Libros </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enlace" aria-current="page" href="/nuevo/{{user_in_session.id}}"> Nuevo Libro </a>
+                </li>
+                
+            </ul>
+            <div class="d-flex" role="search">
+                <a href="/salir" class="btn btn-danger"> Cerrar Sesión </a>
+            </div>
+        </div>
+    </div>
+</nav>

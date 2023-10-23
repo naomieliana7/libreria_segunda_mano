@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&family=Varela+Round&display=swap');
+
+
+.enlace{
+    font-size: 20px;
+    text-decoration: underline;
+    color: blue;
+}
+.enlace:hover{
+    color: red;
+}
+.titulo{
+    font-family: 'Caveat Brush', cursive;
+}
+.subtitulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+#imagen{
+    width: 30px;
+}
+#inicio_portada{
+    background-image: url('/static/portada.jpg');
+}
+#titulo_portada{
+    font-family: 'Caveat Brush', cursive;
+    background-color: beige;
+    font-size:100px;
+}
+#container{
+    text-align: center;
+    padding: 100px;
+}
+#boton_inicio{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.texto_inicio{
+    color: aliceblue;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+}
+
+.login_registro{
+    background-image: url('/static/login_registro.jpg');
+    background-position: 50% 0;
+    background-size: cover;
+}
+.login_registro h3{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 50px;
+    background-color: beige;
+    text-align: center;
+}
+.indicador{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+#datos_dueño{
+    list-style: none;
+    font-size: 20px;
+}
+
+#datos_dueño li{
+    padding-bottom: 20px;
+}

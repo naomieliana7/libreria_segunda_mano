@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block estilos %}
+{% endblock %}
+
+{% block menu %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class=" titulo navbar-brand fs-1 fw-bold ml-4" href="/">Book Bazar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item" id="boton">
+                    <a class="nav-link enlace" aria-current="page" href="/inicio"> Inicio </a>
+                </li>
+
+            </ul>
+            <div class="d-flex" role="search">
+                <a href="/salir" class="btn btn-danger"> Cerrar Sesión </a>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block contenido %}
+<h3 class="text-center mb-4 subtitulo">Datos del dueño del libro</h3>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="m-1">
+        <img src="{{ mostrar_imagen(libro.portada) }}" alt="Portada del libro" style="width: 200px;">
+    </div>
+    <div class="m-1" >
+        <ul id="datos_dueño">
+            <li><strong>Título del Libro:</strong> {{ libro.título }}</li>
+            <li><strong>Nombre del dueño:</strong> {{ usuario.nombre }} {{ usuario.apellido }}</li>
+            <li><strong>Dirección de correo:</strong> {{ usuario.correo }}</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

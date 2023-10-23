@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+{% endblock %}
+
+{% block estilos %}
+{% endblock %}
+
+
+
+{% block contenido %}
+<body class="login_registro">
+    <div class="row">
+        <div class="col-6 mx-auto"> 
+            <h3>LOGIN</h3>
+            <hr>
+            <form action="/procesar_login" method="post">
+                <div class="row g-3 align-items-center">
+                    <div class="col-3">
+                        <label for="correo" class="col-form-label indicador">Correo</label>
+                    </div>
+                    <div class="col-9">
+                        <input type="text" id="correo" name="correo" class="form-control">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mt-3">
+                    <div class="col-3">
+                        <label for="contraseña" class="col-form-label indicador">Contraseña</label>
+                    </div>
+                    <div class="col-9">
+                        <input type="password" id="contraseña" name="contraseña" class="form-control">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center mt-3">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-9">
+                        <button class="btn btn-primary" type="submit" style="font-size: 20px;">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

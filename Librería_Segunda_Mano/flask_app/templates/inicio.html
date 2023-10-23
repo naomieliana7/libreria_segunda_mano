@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block estilos %}
+{% endblock %}
+
+{% block menu %}
+{% include 'menu.html' %}
+{% endblock %}
+
+{% block contenido %}
+<div>
+    <h3 class="text-center subtitulo">Libros Disponibles</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Portada</th>
+                <th>Título</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for libro in libros %}
+            <tr>
+                <td><img src="{{ mostrar_imagen(libro.portada) }}" alt="Portada del libro" style="width: 50px;" ></td>
+                <td>{{ libro.título }}</td>
+                <td>{{ libro.categoría }}</td>
+                <td>{{ libro.precio }}</td>
+                <td>{{ libro.descripción }}</td>
+                <td>
+                    {% if libro.usuario_id == usuario.id %}
+                        <a href="/editar/{{ libro.id }}">editar</a> |
+                        <a href="/eliminar/{{ libro.id }}">eliminar</a>
+                    {% elif usuario.id is defined %}
+                        <a class="btn btn-danger" href="/comprar/{{ libro.id }}">Solicitar Compra</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}

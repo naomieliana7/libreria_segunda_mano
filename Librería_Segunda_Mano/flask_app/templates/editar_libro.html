@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="titulo navbar-brand fs-1 fw-bold" href="/">Book Bazar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item">
+                    <a class="nav-link enlace" aria-current="page" href="/"> Panel </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enlace" aria-current="page" href="/mis_libros/{{user_in_session.id}}"> Mis Libros </a>
+                </li>
+            </ul>
+            <div class="d-flex" role="search">
+                <a href="/salir" class="btn btn-danger"> Cerrar Sesión </a>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block estilos %}
+{% endblock %}
+
+{% block contenido %}
+<div class="row">
+    <div class="col-6">
+        <h3 class="subtitulo">Editar Libro</h3>
+        <hr>
+        <form action="/procesar_libro_editar/{{libro.id}}" method="post"  enctype="multipart/form-data">
+            <div class="row g-3 align-items-center mt-3">
+                <div class="col-3">
+                    <label for="name" class="col-form-label">Título</label>
+                </div>
+                <div class="col-9">
+                    <input value='{{libro.título}}'type="text" id="título" name="título" class="form-control">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mt-3">
+                <div class="col-3">
+                    <label for="name" class="col-form-label">Autor</label>
+                </div>
+                <div class="col-9">
+                    <input value="{{libro.autor}}" type="text" id="autor" name="autor" class="form-control">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mt-3">
+                <label for="inputState" class="form-label col-3">Categoría</label>
+                <div class="col-9">
+                    <select id="inputState" name="categoría" class="form-select">
+                        <option selected="">{{libro.categoría}}</option>
+                        <option>Autoayuda y desarrollo personal</option>
+                        <option>Arte y fotografía</option>
+                        <option>Biografía y autobiografía</option>
+                        <option>Ciencia ficción y fantasía</option>
+                        <option>Ciencia y tecnología</option>
+                        <option>Cocina y gastronomía</option>
+                        <option>Ficción</option>
+                        <option>Historia</option>
+                        <option>Infantil y juvenil</option>
+                        <option>Misterio y thriller</option>
+                        <option>Negocios y finanzas</option>
+                        <option>No ficción</option>
+                        <option>Poesía</option>
+                        <option>Política y ciencias sociales</option>
+                        <option>Religión y espiritualidad</option>
+                        <option>Viajes</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row g-3 align-items-center mt-3">
+                <div class="col-3">
+                    <label for="name" class="col-form-label">Precio </label>
+                </div>
+                <div class="col-9">
+                    <input value="{{libro.precio}}" type="text" id="precio" name="precio" class="form-control">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mt-3">
+                <div class="col-3">
+                    <label for="name" class="col-form-label">Descripción </label>
+                </div>
+                <div class="col-9">
+                    <input value="{{libro.descripción}}" type="text" id="descripción" name="descripción" class="form-control">
+                </div>
+            </div> 
+            <div class="row g-3 align-items-center mt-3">
+                <div class="col-3">
+                    <label for="portada" class="col-form-label">Portada</label>
+                </div>
+                <div class="col-9">
+                    <input value="{{libro.portada}}" type="file" id="portada" name="portada" class="form-control">
+                </div>
+            </div>
+            
+            <div class="row g-3 align-items-center mt-3">
+                <div class="col-3">
+                </div>
+                <div class="col-9">
+                    <button class="btn btn-primary" type="submit">Actualizar!!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
